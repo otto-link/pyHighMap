@@ -26,6 +26,11 @@ To install the pyHighMap Python binding, use `pip3`:
 pip3 install pyhighmap
 ```
 
+To force update to the last version, use:
+```bash
+pip3 install --upgrade pyhighmap
+```
+
 ## Linux Dependencies
 
 Before installing the Python package, you may need to install some
