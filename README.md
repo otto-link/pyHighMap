@@ -23,6 +23,7 @@ To install the pyHighMap Python binding, use `pip3`:
 
 ```bash
 pip3 install pyhighmap
+```
 
 ## Linux Dependencies
 
@@ -31,6 +32,7 @@ additional dependencies on your Linux system, such as:
 
 ```bash
 sudo apt install libopencv-dev libgsl-dev
+```
 
 These libraries are required for certain features within HighMap. Make
 sure they are installed before proceeding with the Python package
