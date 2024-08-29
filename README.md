@@ -1,4 +1,4 @@
-# pyhighmap - HighMap python binding
+# HighMap python binding (pyhighmap)
 
 This repository contains the Python bindings for the [HighMap C++
 library](https://github.com/otto-link/HighMap). This package allows
