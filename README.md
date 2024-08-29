@@ -2,7 +2,8 @@
 
 This repository contains the Python bindings for the [HighMap C++
 library](https://github.com/otto-link/HighMap). This package allows
-you to use HighMap directly in your Python projects.
+you to use **a few functionalities (for now)** if HighMap directly in
+your Python projects.
 
 >[!WARNING] 
 > Work in progress, use at your own risk!
