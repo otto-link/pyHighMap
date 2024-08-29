@@ -29,7 +29,7 @@ ext_modules = [
 
 setup(
     name='pyhighmap',
-    version='0.0.0',
+    version='0.0.1',
     description='Python bindings for HighMap',
     # long_description=open('README.md').read(),
     # long_description_content_type='text/markdown',
@@ -39,11 +39,15 @@ setup(
     license='GPLv3',
     ext_modules=ext_modules,
     packages=['pyhighmap'],
+    include_package_data=True,  # Ensure non-Python files are included
+    package_data={
+        'pyhighmap': ['*.so'],  # Ensure .so files are included
+    },
     classifiers=[
         'Programming Language :: Python :: 3',
         'Programming Language :: C++',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
-        'Operating System :: Linux',
+        'Operating System :: POSIX :: Linux',
     ],
     python_requires='>=3.6',
 )

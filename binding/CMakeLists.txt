@@ -43,8 +43,9 @@ add_custom_target(build_python_module ALL
     COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:pyhighmap> ${BUILD_MODULE_DIR}/pyhighmap/
 
     WORKING_DIRECTORY ${BUILD_MODULE_DIR}
+    COMMAND ${CMAKE_COMMAND} -E rm ${BUILD_MODULE_DIR}/dist/*
     COMMAND ${PYTHON_EXECUTABLE} setup.py build
-    COMMAND ${PYTHON_EXECUTABLE} setup.py sdist bdist_wheel
+    COMMAND ${PYTHON_EXECUTABLE} setup.py sdist bdist_wheel --plat-name=manylinux2014_x86_64
     
     DEPENDS pyhighmap
     DEPENDS create_module_builtdir
@@ -62,5 +63,5 @@ add_custom_target(build_wheel_with_docker ALL
 add_custom_target(export_wheel ALL
     WORKING_DIRECTORY ${BUILD_MODULE_DIR}
     COMMAND twine upload dist/*
-    DEPENDS build_wheel_with_docker
+    DEPENDS build_python_module #build_wheel_with_docker
 )
